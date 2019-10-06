@@ -216,6 +216,7 @@ namespace Genetic_AI
 
         private void PrintOut_All_Data_Click(object sender, RoutedEventArgs e)
         {
+
             File.WriteAllText("Hello.csv", genetic_Main_Engine.Print_Data());   
         }
     }

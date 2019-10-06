@@ -40,7 +40,8 @@ namespace Genetic_AI
 
             for (int i = 0; i < (int)genetic_raw_object["Genetic Length"]; i++)
             {
-                genetic_target_data[i] = random_generator.Next((int)genetic_raw_object["Genetic Range"][0], (int)genetic_raw_object["Genetic Range"][1]);
+                genetic_target_data[i] = 
+                    random_generator.Next((int)genetic_raw_object["Genetic Range"][0], (int)genetic_raw_object["Genetic Range"][1]);
             }
 
         }
@@ -53,7 +54,8 @@ namespace Genetic_AI
 
                 for (int k = 0; k < genetic_member.Length; k++)
                 {
-                    genetic_member[k] = random_generator.Next((int)genetic_raw_object["Genetic Range"][0], (int)genetic_raw_object["Genetic Range"][1]);
+                    genetic_member[k] = 
+                        random_generator.Next((int)genetic_raw_object["Genetic Range"][0], (int)genetic_raw_object["Genetic Range"][1]);
                 }
                 gene_set.Add(genetic_member);
             }
