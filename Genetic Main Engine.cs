@@ -181,14 +181,24 @@ namespace Genetic_AI
                 return false;
         }
 
-        public string Print_Data()
+        public string result_to_string = "";
+
+        public void Store_Data()
         {
-            string result_to_string = "";
-            foreach(int result in Result_Pile )
+            
+            result_to_string += '"' + "Genetic Length:" + genetic_raw_object["Genetic Length"].ToString() + '"' + ',';
+            result_to_string += '"' + "Entity:" + genetic_raw_object["Entity"].ToString() + '"' + ',';
+            result_to_string += '"' + "Mutant Probability:" + genetic_raw_object["Mutant Probability"].ToString() + '"' + ',';
+
+            result_to_string += "\n";
+
+            foreach (int result in Result_Pile )
             {
                 result_to_string += '"'+result.ToString()+'"'+',';
             }
-            return result_to_string;
+
+            result_to_string += "\n";
+            Result_Pile.Clear();
         }
     }
 

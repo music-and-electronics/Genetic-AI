@@ -10,7 +10,7 @@ namespace Genetic_AI
     {
         Genetic_Main_Engine genetic_Main_Engine = new Genetic_Main_Engine();
         bool stop_event = false;
-
+        int test_num = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -164,10 +164,12 @@ namespace Genetic_AI
             if (stop_event == true)
             {
                 MessageBox.Show("Process Stoped!");
+
             }
             else
             {
                 MessageBox.Show("Calculation Completed!");
+                genetic_Main_Engine.Store_Data();
             }
         }
 
@@ -216,8 +218,8 @@ namespace Genetic_AI
 
         private void PrintOut_All_Data_Click(object sender, RoutedEventArgs e)
         {
-
-            File.WriteAllText("Hello.csv", genetic_Main_Engine.Print_Data());   
+            File.WriteAllText($"test {test_num.ToString()}result.csv", genetic_Main_Engine.result_to_string);
+            test_num++;
         }
     }
 }

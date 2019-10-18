@@ -13,5 +13,6 @@ namespace Genetic_AI
     /// </summary>
     public partial class App : Application
     {
+        
     }
 }
