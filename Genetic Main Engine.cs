@@ -41,7 +41,8 @@ namespace Genetic_AI
             for (int i = 0; i < (int)genetic_raw_object["Genetic Length"]; i++)
             {
                 genetic_target_data[i] = 
-                    random_generator.Next((int)genetic_raw_object["Genetic Range"][0], (int)genetic_raw_object["Genetic Range"][1]);
+                    random_generator.Next(
+                    (int)genetic_raw_object["Genetic Range"][0], (int)genetic_raw_object["Genetic Range"][1]);
             }
 
         }
@@ -55,7 +56,8 @@ namespace Genetic_AI
                 for (int k = 0; k < genetic_member.Length; k++)
                 {
                     genetic_member[k] = 
-                        random_generator.Next((int)genetic_raw_object["Genetic Range"][0], (int)genetic_raw_object["Genetic Range"][1]);
+                        random_generator.Next(
+                        (int)genetic_raw_object["Genetic Range"][0], (int)genetic_raw_object["Genetic Range"][1]);
                 }
                 gene_set.Add(genetic_member);
             }
@@ -90,7 +92,8 @@ namespace Genetic_AI
                     }
 
                     gene_set[i][genetic_mix_rand_num] =
-                        random_generator.Next((int)genetic_raw_object["Genetic Range"][0], (int)genetic_raw_object["Genetic Range"][1]);
+                        random_generator.Next(
+                        (int)genetic_raw_object["Genetic Range"][0], (int)genetic_raw_object["Genetic Range"][1]);
                 }
 
                 else if (random_generator.Next(1, 100) < 100 && random_generator.Next(1, 100) >= 50)
@@ -186,9 +189,15 @@ namespace Genetic_AI
         public void Store_Data()
         {
             
-            result_to_string += '"' + "Genetic Length:" + genetic_raw_object["Genetic Length"].ToString() + '"' + ',';
-            result_to_string += '"' + "Entity:" + genetic_raw_object["Entity"].ToString() + '"' + ',';
-            result_to_string += '"' + "Mutant Probability:" + genetic_raw_object["Mutant Probability"].ToString() + '"' + ',';
+            result_to_string += '"' + "Genetic Length:"
+                                    + genetic_raw_object["Genetic Length"].ToString()
+                                    + '"' + ',';
+            result_to_string += '"' + "Entity:" 
+                                    + genetic_raw_object["Entity"].ToString() 
+                                    + '"' + ',';
+            result_to_string += '"' + "Mutant Probability:"
+                                    + genetic_raw_object["Mutant Probability"].ToString() 
+                                    + '"' + ',';
 
             result_to_string += "\n";
 
